@@ -1,0 +1,5 @@
+Proyecto SICIT - Sistema de Información para la Clínica
+Aprendiz: David Fajardo Esteban
+Programa: Tecnólogo en Análisis y Desarrollo de Software - SENA
+
+Este archivo representa el proyecto utilizado para practicar control de versiones con Git y GitHub.
