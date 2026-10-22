@@ -1,0 +1,11 @@
+:root{--primary:#163c56;--accent:#16869a;--bg:#eef3f7;--surface:#fff;--text:#172b40;--muted:#647487;--danger:#b3261e;--border:#d5e0e8}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+.topbar{background:var(--primary);color:#fff;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:20px;font-weight:700}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:7px}.nav a:hover,.nav a.active{background:rgba(255,255,255,.18)}
+.container{width:min(1120px,92%);margin:28px auto}.hero,.card,.form-card{background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:0 7px 22px rgba(20,50,70,.07)}
+.hero{padding:34px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}.card{padding:22px}.card a{color:var(--accent);font-weight:700;text-decoration:none}
+.form-card{padding:24px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.wide{grid-column:1/-1}label{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:14px}
+input,select,textarea{padding:11px 12px;border:1px solid #bfcbd5;border-radius:8px;font:inherit}.actions{display:flex;gap:10px;margin-top:18px}.btn{border:0;border-radius:8px;padding:10px 15px;background:var(--primary);color:#fff;font-weight:700;text-decoration:none}.btn.secondary{background:#617484}
+.alert{padding:12px 14px;border-radius:8px;margin:16px 0;background:#e5f5ed;color:#125f3b;border:1px solid #b3dec9}
+table{width:100%;border-collapse:collapse;margin-top:20px;background:#fff}th,td{padding:10px;border-bottom:1px solid var(--border);text-align:left}th{background:#e9f0f4}td a{color:var(--accent);font-weight:700;text-decoration:none}.delete{color:var(--danger)!important}
+footer{text-align:center;color:var(--muted);padding:28px}@media(max-width:780px){.topbar{flex-direction:column;align-items:flex-start}.cards,.grid{grid-template-columns:1fr}.wide{grid-column:auto}}
