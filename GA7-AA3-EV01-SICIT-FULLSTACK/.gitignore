@@ -1,0 +1,6 @@
+# Archivos locales o temporales
+.DS_Store
+Thumbs.db
+*.log
+.env
+.vscode/

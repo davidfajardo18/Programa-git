@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SICIT - Centro Médico. Aplicación académica con Bootstrap, JavaScript, PHP y MySQL.">
+  <title>Pacientes | Centro Médico</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-module='pacientes'>
+<header class="topbar">
+  <div class="container-fluid app-nav">
+    <a class="brand" href="index.html"><span class="brand-icon">✚</span><strong>Centro Médico</strong></a>
+    <nav class="main-nav" aria-label="Menú principal">
+      <a class="nav-link" href="index.html">Inicio</a>
+<a class="nav-link active" href="pacientes.html">Pacientes</a>
+<a class="nav-link" href="medicos.html">Médicos</a>
+<a class="nav-link" href="citas.html">Citas</a>
+<a class="nav-link" href="consultorios.html">Consultorios</a>
+<a class="nav-link" href="usuarios.html">Usuarios</a>
+<a class="nav-link" href="roles.html">Roles</a>
+    </nav>
+  </div>
+</header>
+<main class="container py-5">
+
+<section class="form-page">
+  <div class="d-flex justify-content-between align-items-start gap-3 flex-wrap mb-4">
+    <div>
+      <h1>Pacientes</h1>
+      <p class="subtitle">Formulario para registrar y gestionar pacientes.</p>
+    </div>
+    <span class="status-pill" id="connection-status">Conectando...</span>
+  </div>
+
+  <div id="page-alert" class="alert d-none" role="alert"></div>
+
+  <form id="entity-form" class="form-card" novalidate>
+    <input type="hidden" name="id" id="entity-id">
+    <div class="row g-3">
+      <div class="col-md-6"><label class="form-label" for="identificacion">Identificación *</label><input class="form-control" id="identificacion" name="identificacion" maxlength="15" required></div>
+<div class="col-md-6"><label class="form-label" for="nombres">Nombres *</label><input class="form-control" id="nombres" name="nombres" maxlength="50" required></div>
+<div class="col-md-6"><label class="form-label" for="apellidos">Apellidos *</label><input class="form-control" id="apellidos" name="apellidos" maxlength="50" required></div>
+<div class="col-md-6"><label class="form-label" for="fecha_nacimiento">Fecha de nacimiento *</label><input class="form-control" type="date" id="fecha_nacimiento" name="fecha_nacimiento" required></div>
+<div class="col-md-6"><label class="form-label" for="sexo">Sexo *</label><select class="form-select" id="sexo" name="sexo" required><option value="">Seleccione</option><option>Femenino</option><option>Masculino</option><option>Otro</option></select></div>
+<div class="col-md-6"><label class="form-label" for="usuario_id">Usuario asociado</label><select class="form-select" id="usuario_id" name="usuario_id"><option value="">Sin asociación</option></select></div>
+    </div>
+    <div class="actions">
+      <button type="button" class="btn btn-outline-secondary" id="cancel-edit">Limpiar</button>
+      <button type="submit" class="btn btn-primary" id="save-button">Guardar</button>
+    </div>
+  </form>
+
+  <section class="records-card mt-4">
+    <div class="records-header">
+      <div>
+        <h2>Registros</h2>
+        <p class="small text-secondary mb-0">Los datos se cargan desde MySQL.</p>
+      </div>
+      <button class="btn btn-sm btn-outline-primary" id="reload-button" type="button">Actualizar lista</button>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0">
+        <thead><tr><th>ID</th><th>Identificación</th><th>Paciente</th><th>Sexo</th><th>Usuario</th><th>Acciones</th></tr></thead>
+        <tbody id="records-body">
+          <tr><td colspan="6" class="empty-state">Cargando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>
+
+</main>
+<div id="toast" class="toast-message" role="status" aria-live="polite"></div>
+<footer>© <span class="year"></span> Centro Médico · Proyecto académico SICIT</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
