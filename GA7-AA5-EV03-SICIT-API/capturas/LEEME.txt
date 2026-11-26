@@ -1,0 +1,2 @@
+Guarde aquí los pantallazos reales tomados durante el Testing en Postman.
+No use imágenes simuladas. Las capturas deben mostrar método, endpoint, status y respuesta JSON.
